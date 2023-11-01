@@ -1,0 +1,76 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin-top: 4rem;
+}
+.products .card img{
+    width: 12rem;
+    height: 12rem;
+}
+h2{
+   text-align: center;
+   margin-top: 5rem;
+}
+
+.container-fluid {
+    height: 40vh;
+}
+
+h1{
+    text-align: center;
+}
+
+#Sort, #add {
+    background: #0c0c0c;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+    z-index: 2;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+  }
+
+.Video{
+    position: absolute;
+
+  }
+
+  @media screen and (max-width: 480px) {
+    body {
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Add your styles for this range */
+}
+
+@media (min-width: 1200px) and (max-width: 1919px) {
+    /* Add your styles for this range */
+}
+
