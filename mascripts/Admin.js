@@ -71,7 +71,7 @@ const tableEl = document.getElementById('table');
 document.querySelector('#tbody').innerHTML =``
 let x = localStorage.setItem('sneakers',JSON.stringify(products));
 let y = localStorage.getItem('sneakers');
-// console.log(JSON.parse(y));
+
 function tableProduct() {
     document.querySelector('#tbody').innerHTML = ''
     let sneakers = JSON.parse(localStorage.getItem('sneakers'))

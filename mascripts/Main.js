@@ -1,8 +1,10 @@
-let x = localStorage.setItem('sneakers',JSON.stringify(products));
-let y = localStorage.getItem('sneakers');
+
+window.onload = function() {
+const sneakersEl = document.querySelector('#products');
+
     function displayProduct() {
         products.forEach((sneakers) => {
-            document.querySelector('#products').innerHTML +=`
+           sneakersEl.innerHTML +=`
     <div class="card m-auto" style="width: 18rem;">
     <img src="${sneakers.image}" class="card-img-top" alt="sneaker">
     <div class="card-body">
@@ -11,28 +13,29 @@ let y = localStorage.getItem('sneakers');
         <p class="card-text"><small class="text-muted">Price: R${sneakers.price}</small></p>
         <a href="#" class="btn btn-primary" id="check" onclick="addToCart(${sneakers.id})">Add</a>
     </div>
-    </div>`
+    </div>`;
         })
         
     };
 
-displayProduct();
+
+    
+    displayProduct();
 
 let cart = [];
+const cartItemsEl = document.getElementById('tafula');
 
-function addToCart(id){
-    if(cart.some((item) => item.id === item.id)){
+function addToCart(id) {
+    if (cart.some((item) => item.id === id)) {
         alert("Product already added");
-    }else{
-        const item = products.find((product) =>product.id === id);
+    } else {
+        const item = products.find((product) => product.id === id);
         cart.push({
-            ...item, 
+            ...item,
             quantity: 1,
-    });
+        });
     }
-
     updateCart();
-
 }
 
 function updateCart() {
@@ -40,6 +43,19 @@ function updateCart() {
 }
 
 function cartItems() {
-   cart.forEach(() =>
-   {})
+    cartItemsEl.innerHTML = "";
+    cart.forEach((item) => {
+        cartItemsEl.innerHTML += `
+        <tr>
+        <th scope="row">${item.id}</th>
+        <td>${item.productName}</td>
+        <td>${item.quantity}</td>
+        <td>${item.price}</td>
+      </tr>`;
+    });
+
 }
+
+}
+
+
