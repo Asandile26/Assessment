@@ -1,17 +1,14 @@
-const tableEl = document.getElementById('table');
-document.querySelector('#tbody').innerHTML =``
+const tableEl = document.querySelector("#tbody");
 
 function tableProduct() {
-    document.querySelector('#tbody').innerHTML = ''
-    let sneakers = JSON.parse(localStorage.getItem('sneakers'))
-    sneakers.forEach((item) => {
+    products.forEach((product) => {
         document.querySelector('#tbody').innerHTML +=`
         <tr>
-        <th scope="row">${item.id}</th>
-        <td>${item.productName}</td>
-        <td>${item.price}</td>
-        <td>${item.instock}</td>
-        <td><button onclick="edit(${item.id})" id="edit"><i class="fa-solid fa-pen-to-square"></i></button></td>
+        <th scope="row">${product.id}</th>
+        <td>${product.productName}</td>
+        <td>${product.price}</td>
+        <td>${product.instock}</td>
+        <td><button onclick="edit(${product.id})" id="edit"><i class="fa-solid fa-pen-to-square"></i></button></td>
         <td><button class="deleteBtn"><i class="fa-solid fa-trash"></i></button></td>
         </tr>
         `
