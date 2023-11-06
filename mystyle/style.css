@@ -11,22 +11,27 @@ html {
     font-size: 16px;
     overflow-x: hidden;
   }
+body{
+    background-color: #fff;
+}
 
 .products{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     margin-top: 4rem;
 }
-.products .card img{
-    width: 12rem;
-    height: 12rem;
-
-}
+ .card img{
+    width: 18rem;
+    justify-content: center;
+    object-fit: contain;
+    object-position: top;
+    background-position: center
+ }
 
 h2{
    text-align: center;
-   margin-top: 5rem;
+   margin-top: 90px;
 }
 
 
@@ -37,6 +42,7 @@ h2{
 
 h1{
     text-align: center;
+    margin-top: 90px;
 }
 
 
@@ -53,9 +59,6 @@ h1{
     color: #fff;
   }
 
-
-
-
   .container{
     display: flex;
     align-items: center;
@@ -66,29 +69,32 @@ h1{
     position: relative;
     padding: 0 5%;
   }
-  .navba{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding:  20px 8%;
-  }
-  .navba ul li{
-    list-style: none;
-    display: inline-block;
-    margin-left: 40px;
-   
-  }
 
 
-  .navba ul li a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 17px;
-  }
+ .navba {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0; 
+  padding: 20px 150px;
+  background-color: #ffffff; 
+}
+
+.navba ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.navba ul li a {
+  text-decoration: none;
+  color: #0c0c0c;
+  font-size: 24px;
+}
+
 
 
   .cont{
@@ -99,7 +105,6 @@ h1{
     color: #fff;
     font-weight: 600;
   }
-
 
   .cont a{
     text-decoration: none;
@@ -185,47 +190,4 @@ h1{
 
   font-size: 1.2rem;
 }
-.cart-item .units .btn {
-  width: 20px;
-  height: 20px;
 
-  background-color: rgb(242, 255, 58);
-
-  border-radius: 50%;
-
-  font-weight: bold;
-
-  cursor: pointer;
-
-  -webkit-user-select: none; /* Chrome all / Safari all */
-  -moz-user-select: none; /* Firefox all */
-  -ms-user-select: none; /* IE 10+ */
-}
-
-/* cart footer */
-.cart-footer {
-  width: 100%;
-  background-color: rgb(255, 21, 21);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  border-left: 1px solid rgb(var(--right-side-bg-color));
-}
-.cart-footer div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 15px 0;
-
-  font-size: 1.3rem;
-}
-.cart-footer .subtotal {
-  background-color: white;
-}
-.cart-footer .checkout {
-  background-color: rgb(242, 255, 58);
-
-  cursor: pointer;
-}

@@ -10,84 +10,87 @@
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/myhtml/path/to/font-awesome/css/font-awesome.min.css">
 
-    <title>Admin</title>
+    <title></title>
 </head>
 <body>
 <header>
-  <nav class="navba">
-    <ul>
-        <li><a class="dropdown-item" href="/index.html">Home</a></li>
-        <li><a class="dropdown-item" href="/myhtml/Product.html">Product</a></li>
-        <li><a class="dropdown-item" href="/myhtml/Admin.html">Admin</a></li>
-        <li><a class="dropdown-item" href="/myhtml/Cart.html">Cart</a></li>
-      </ul>
-</nav>
-</header>
-<main>
-<div class="table" id="table">
-  <table class="table table-dark table-hover">
-    <h1>Admin</h1>
-    <button onclick="sort()" id="Sort">Sort</button>
-    <button id="add" data-bs-toggle="modal" data-bs-target="#modal2">
-      Add
-    </button>
-   <div class="modal" id="modal2" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content bg-light">
-          <div class="modal -header">
-            <h5 class="modal-title">Modal title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body bg-light" >
-            <h3>Product</h3>
-            <div id="bottom-boder">
-              <div>
-                <label><input type="text" placeholder="Enter Id" id="id">
-                </label>
-              </div>
-              <div>
-                <label><input type="text" for="" placeholder="Enter ProductName" id="productName">
-                </label> 
-              </div>
-              <div>
-                <label><input type="text" placeholder="Enter units of stock" id="instock">
-                </label>
-              </div>
-              <div>
-                <label><input type="text" placeholder="Enter Price" id="price">
-                </label>
+  <div class="admin">
+
+    <nav class="navba">
+      <ul>
+          <li><a class="dropdown-item" href="/index.html">Home</a></li>
+          <li><a class="dropdown-item" href="/myhtml/Product.html">Product</a></li>
+          <li><a class="dropdown-item" href="/myhtml/Admin.html">Admin</a></li>
+          <li><a class="dropdown-item" href="/myhtml/Cart.html">Cart</a></li>
+        </ul>
+  </nav>
+  </header>
+  <main>
+  <div class="table" id="table">
+    <table class="table table-dark table-hover">
+      <h1>Admin</h1>
+      <button onclick="sort()" id="Sort">Sort</button>
+      <button id="add" data-bs-toggle="modal" data-bs-target="#modal2">
+        Add
+      </button>
+     <div class="modal" id="modal2" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content bg-light">
+            <div class="modal -header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-light" >
+              <h3>Product</h3>
+              <div id="bottom-boder">
                 <div>
-                  <label><input type="url" placeholder="Enter Image URL" id="image">
+                  <label><input type="text" placeholder="Enter Id" id="id">
+                  </label>
+                </div>
+                <div>
+                  <label><input type="text" for="" placeholder="Enter ProductName" id="productName">
+                  </label> 
+                </div>
+                <div>
+                  <label><input type="text" placeholder="Enter units of stock" id="instock">
+                  </label>
+                </div>
+                <div>
+                  <label><input type="text" placeholder="Enter Price" id="price">
+                  </label>
+                  <div>
+                    <label><input type="url" placeholder="Enter Image URL" id="image">
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" id="save">Save changes</button>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="save">Save changes</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    </form>
-    <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">ProductName</th>
-        <th scope="col">Price</th>
-        <th scope="col">instock</th>
-        <th scope="col">Edit</th>
-        <th scope="col">Delete</th>
-        
-      </tr>
-      <tbody id="tbody">
-
-      </tbody>
-    </thead>
-  </table>
-
-</div>
-</main>
+      </form>
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">ProductName</th>
+          <th scope="col">Price</th>
+          <th scope="col">instock</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+          
+        </tr>
+        <tbody id="tbody">
+  
+        </tbody>
+      </thead>
+    </table>
+  
+  </div>
+  </main>
+  </div>
 
 <!-- <script src="/myscript/code.js"></script> -->
     <!-- JavaScript Bundle with Popper -->

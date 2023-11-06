@@ -35,7 +35,6 @@ let newSneakers = function(id, productName, price, instock, image){
 }
 
 function edit(id) {
-    // Find the product with the given id
     let productToEdit = products.find(product => product.id === id);
 
     document.querySelector('#id').value = productToEdit.id;
