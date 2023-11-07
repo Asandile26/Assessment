@@ -16,9 +16,12 @@ body{
 }
 
 .products{
+
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
     margin-top: 4rem;
 }
  .card img{
